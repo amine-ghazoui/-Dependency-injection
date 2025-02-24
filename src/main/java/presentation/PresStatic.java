@@ -12,11 +12,11 @@ public class PresStatic {
         instanciation statique ==> new
          */
         IDao dao = new IDaoImpl();
-        //IMetierImpl metier1 = new IMetierImpl(dao); // injection via le constructeur
+        IMetierImpl metier1 = new IMetierImpl(dao); // injection via le constructeur
 
-        IMetierImpl metier = new IMetierImpl();
-        metier.setDao(dao); // Injection via le setter
+//        IMetierImpl metier = new IMetierImpl();
+//        metier.setDao(dao); // Injection via le setter
 
-        System.out.println("Resultats = "+metier.calcul());
+        System.out.println("Resultats = "+metier1.calcul());
     }
 }
