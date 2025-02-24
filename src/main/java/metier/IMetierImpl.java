@@ -13,9 +13,10 @@ public class IMetierImpl implements IMetier {
         return result;
     }
 
-    public IMetierImpl(IDao dao) {
-        this.dao = dao;
-    }
+//    public IMetierImpl(IDao dao) {
+//        this.dao = dao;
+//    }
+
 
     /*
         pour injecter dans la variable dao
@@ -23,6 +24,7 @@ public class IMetierImpl implements IMetier {
         l'interface IDao
     */
     public void setDao(IDao dao) {
+
         this.dao = dao;
     }
 }
