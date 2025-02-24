@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 public class IMetierImpl implements IMetier {
 
 
-    @Autowired
     public IDao dao;
     @Override
     public double calcul() {
@@ -18,7 +17,7 @@ public class IMetierImpl implements IMetier {
         return result;
     }
 
-    public IMetierImpl(IDao dao) {
+    public IMetierImpl(@Qualifier("dao2") IDao dao) {
         this.dao = dao;
     }
 
